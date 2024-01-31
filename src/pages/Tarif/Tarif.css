@@ -1,9 +1,9 @@
 /* Tarif.css */
 .video-background2 {
     position: relative;
-    width: 100vw; /* Utilisez la largeur totale de la fenêtre */
-    height: 100vh; /* Utilisez la hauteur totale de la fenêtre */
-    overflow: hidden; /* Assure que rien ne dépasse du cadre de la vidéo */
+    overflow: hidden;
+    height: 100vh; 
+
 }
 
 .video-background2 video {

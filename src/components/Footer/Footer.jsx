@@ -9,7 +9,6 @@ const Footer = () => {
                         <div className="py-[15px] px-0">
                             <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
                                 <div className="lg:col-span-3 md:col-span-4">
-                                    {/* Company Section */}
                                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
                                         Maverick
                                     </h5>
@@ -38,7 +37,6 @@ const Footer = () => {
                                 </div>
 
                                 <div className="lg:col-span-6 md:col-span-4">
-                                    {/* Important Links Section */}
                                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
                                         Lien
                                     </h5>
@@ -62,7 +60,6 @@ const Footer = () => {
                                 </div>
 
                                 <div className="lg:col-span-3 md:col-span-4">
-                                    {/* Newsletter Section - Moved to the right */}
                                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
                                         Newsletter
                                     </h5>

@@ -12,13 +12,12 @@
     }
 }
 
-/* Ajoutez cette classe à votre balise style ou à votre feuille de style */
 .animate-slide-down {
     animation: slideDown 0.5s ease-out;
 }
 
 .back.with-effect {
-    background-color: rgba(255, 255, 255, 0.2); /* Couleur de fond plus foncée avec opacité */
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
 

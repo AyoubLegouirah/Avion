@@ -8,23 +8,13 @@ import 'typeface-orbitron';
 import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
-import { faCircle, faInfo } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalComponent from '../../components/ModalComponent/ModalComponent';
+
 import Footer from '../../components/Footer/Footer';
 
 
 const Avion_detail = ({ avionsDeChasseModernes }) => {
     const { index } = useParams();
     const navigate = useNavigate();
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
     const avion = avionsDeChasseModernes[index];
     useEffect(() => {
         if (!CSS.supports('animation-timeline: view()')) {

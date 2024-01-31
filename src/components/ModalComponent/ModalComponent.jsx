@@ -18,7 +18,6 @@ function ModalComponent({ isOpen, onClose }) {
           Vivez l'exceptionnel avec Maverick. Nos pilotes expérimentés vous guident dans une aventure aérienne personnalisée et sécurisée. Notre processus de réservation simple garantit une expérience sans souci. Choisissez Maverick pour une immersion professionnelle et personnalisée dans les cieux.
         </p>
         <div className="mt-4 flex justify-center text-white">
-          {/* Assurez-vous que l'importation du composant Button est correcte */}
           <Button buttonText="Fermer" onClick={onClose} />
         </div>
       </div>

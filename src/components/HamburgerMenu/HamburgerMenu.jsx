@@ -3,11 +3,8 @@ import './HamburgerMenu.css';
 import 'typeface-anton';
 import 'typeface-orbitron';
 import { Link } from 'react-router-dom';
-import avionsData from './../../avion1.json'; // Assurez-vous de corriger le chemin vers votre fichier JSON
-import Tarif from '../../pages/Tarif/Tarif';
-import A_propos from '../../pages/A_Propos/A_propos';
+import avionsData from './../../avion1.json';
 
-// ... (import statements)
 
 const HamburgerMenu = () => {
   const [isActive, setIsActive] = useState(false);
@@ -35,7 +32,7 @@ const HamburgerMenu = () => {
         <div className="menu">
           <div className="flex flex-col space-y-6 font-bold rounded-md">
             <Link to="/" >
-              <a className='acceuil' href="#">Acceuil</a>
+              <a className='acceuil' href="#">Accueil</a>
             </Link>
             <div className="dropdown" onClick={stopPropagation}>
               <a href="#" className='Avion' onClick={toggleSubmenu}>

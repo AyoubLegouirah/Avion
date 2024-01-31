@@ -242,7 +242,6 @@ section:nth-of-type(2) article:nth-of-type(3) img {
 	font-size: clamp(1.5rem, 0.5vw + 1rem, 4rem);
 	font-weight: 120;
 	text-align: center;
-	/* Ajout de cette ligne pour centrer le texte horizontalement */
 }
 
 /* Barre de défilement */

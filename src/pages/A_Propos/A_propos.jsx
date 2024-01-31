@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 export default function A_propos() {
   return (
     <div className='flex flex-col min-h-screen bg-gray-900'>
-        <div className="absolute top-5 right-0 text-right pr-4">
-          <div className="mb-3">
-            <Link to="/booknow" className="text-white uppercase" style={{ fontFamily: 'Anton, sans-serif', fontSize: '1.25rem' }}>Book Now</Link>
-          </div>
+      <div className="absolute top-5 right-0 text-right pr-4">
+        <div className="mb-3">
+          <Link to="/booknow" className="text-white uppercase" style={{ fontFamily: 'Anton, sans-serif', fontSize: '1.25rem' }}>Book Now</Link>
         </div>
+      </div>
       <HamburgerMenu />
       <div className="text-center">
         <div className="font-eb-garamond">
@@ -26,7 +26,7 @@ export default function A_propos() {
       </div>
       <div className="flex flex-col items-center  justify-center md:flex-row md:items-start md:justify-center ">
         <div className="text-center ">
-        <h1 className="font-bold mb-8 mt-12 text-3xl text-center">À Propos de Nous</h1>
+          <h1 className="font-bold mb-8 mt-12 text-3xl text-center">À Propos de Nous</h1>
           <p className="mb-8 text-2xl text-left ">
             Bienvenue sur Maverick, votre destination ultime pour une expérience aérienne unique.
           </p>
@@ -43,7 +43,7 @@ export default function A_propos() {
             Contactez-nous dès aujourd'hui pour réserver votre session de vol unique et vivez l'excitation de piloter un avion de chasse avec des professionnels de l'aviation.
           </p>
         </div>
-        
+
       </div>
       <Footer />
     </div>

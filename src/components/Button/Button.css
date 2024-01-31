@@ -12,9 +12,9 @@ button {
   --button-fg: var(--fg);
   --hover-bg: var(--fg);
   color: var(--button-fg);
-  font-size: 18px !important; /* Ajoutez !important */
-  padding: 1.5rem 3rem; /* Augmentez les valeurs de padding pour agrandir le bouton */
-  min-width: 100px; /* Ajustez la valeur selon vos besoins */
+  font-size: 18px !important; 
+  padding: 1.5rem 3rem; 
+  min-width: 100px; 
   min-height: 40px;
   border-radius: 100px;
   border: 0px solid black !important; 
@@ -23,8 +23,8 @@ button {
   touch-action: none;
   position: relative;
   overflow: hidden;
-  top: 10px; /* Ajoutez la valeur qui convient à votre design */
-  background: rgba(0, 0, 0, 0.5) !important; /* Ajoutez !important */
+  top: 10px; 
+  background: rgba(0, 0, 0, 0.5) !important;
 }
 
 

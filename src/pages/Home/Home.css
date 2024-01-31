@@ -8,23 +8,6 @@ html {
 
 }
 
-.app {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: scroll;
-  margin: 0;
-  padding: 0;
-}
-
-.app-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: scroll;
-  margin: 0;
-}
-
 .video-background {
   position: relative;
   opacity: 1;
@@ -92,7 +75,7 @@ html {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 100px;
+    top: 120px;
     transform: translateX(-50%);
   }
   
@@ -119,5 +102,5 @@ html {
 
 .horizontal-bar:hover .horizontal-bar-line {
   background-color: hsl(173 100% 51%);
-  /* Ajoutez ici la couleur souhaitée au survol */
+
 }

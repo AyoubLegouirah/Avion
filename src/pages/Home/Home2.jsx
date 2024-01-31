@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import './Home.css';
 import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import ModalComponent from '../../components/ModalComponent/ModalComponent';
 import Button from '../../components/Button/Button';
@@ -10,6 +9,7 @@ import 'typeface-anton';
 import 'typeface-orbitron';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
+import './Home.css';
 
 
 library.add(faCircle, faInfo);
@@ -24,11 +24,9 @@ function Home() {
     setIsModalOpen(false);
   };
   const handleHoverEffect = (target) => {
-    // Ajoutez ici la logique pour l'effet au survol
     console.log(`Hovered over ${target}`);
   };
   const handleVideoEnd = () => {
-    // Redémarrez la vidéo
     if (videoRef.current) {
       videoRef.current.play();
     }
@@ -83,7 +81,6 @@ function Home() {
         </div>
         {/* Pagination */}
         </div>
-        {/* Utilisez FontAwesomeIcon ici pour ouvrir le ModalComponent */}
         <div
           className="absolute bottom-6 left-0 p-4 mt-8 cursor-pointer"
           onClick={openModal}

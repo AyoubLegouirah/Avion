@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import './Home.css';
 import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import ModalComponent from '../../components/ModalComponent/ModalComponent';
 import Button from '../../components/Button/Button';
@@ -10,12 +9,14 @@ import Footer from '../../components/Footer/Footer';
 import 'typeface-anton';
 import 'typeface-orbitron';
 import { Link } from 'react-router-dom';
+import './Home.css';
 
 library.add(faCircle, faInfo);
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activePage, setActivePage] = useState('home');
+  const videoRef = useRef(null);  
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -26,26 +27,33 @@ function Home() {
   };
 
   const handleHoverEffect = (target) => {
-    // Ajoutez ici la logique pour l'effet au survol
     console.log(`Survole de ${target}`);
   };
   const handleVideoEnd = () => {
-    // Redémarrez la vidéo
     if (videoRef.current) {
       videoRef.current.play();
     }
   };
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+    playVideo();
+  }, []);
   return (
 
-    <div className="app relative">
+    <div className="app">
       <div className="video-background">
         <video
           autoPlay
           muted
           loop
-          controls={false}
+          playsInline
           onEnded={handleVideoEnd}
           className="w-full h-full object-cover"
+          ref={videoRef}
         >
           <source src="/video/f_22.mp4" type="video/mp4" />
         </video>
@@ -67,9 +75,6 @@ function Home() {
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 Profitez des sensations offertes par un avion de chasse
               </h1>
-              {/* <p className="text-base md:text-lg lg:text-xl ml-44" style={{ fontFamily: 'Orbitron, sans-serif'}}>
-              Réservez dès maintenant et vivez une expérience inoubliable.
-            </p> */}
               <Link to="/booknow">
                 <Button buttonText="Book Now" />
               </Link>

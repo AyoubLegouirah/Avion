@@ -26,9 +26,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  /* Ajout de l'opacité initial */
   transition: opacity 0.5s;
-  /* Ajout de la transition sur l'opacité */
 }
 
 .left-menu {
@@ -85,7 +83,6 @@
 
 .overlay.active {
   opacity: 1;
-  /* Ajout de l'opacité lorsqu'il est actif */
 }
 
 .menu {
@@ -108,12 +105,10 @@
 
 .hamburger-menu.active .bar:nth-child(1) {
   transform: translate(-5px, 8px);
-  /* Ajustez la translation en fonction de vos besoins */
 }
 
 .hamburger-menu.active .bar:nth-child(3) {
   transform: translate(-5px, -8px);
-  /* Ajustez la translation en fonction de vos besoins */
 }
 
 
@@ -141,9 +136,9 @@
   display: flex;
   flex-direction: column;
   transition: opacity 0.7s, transform 0.7s;
-  opacity: 0; /* Ajout de l'opacité initiale */
-  transform: translateY(-10px); /* Déplacez le submenu vers le haut initialement */
-  animation: slideIn 0.5s ease forwards; /* Ajout de l'animation */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideIn 0.5s ease forwards; 
 }
 
 @keyframes slideIn {
@@ -176,7 +171,6 @@
   transition: background-color 0.3s ease;
   border-bottom: 1px solid #ddd;
   font-size: 14px;
-  /* Ajustez la taille de la police selon vos besoins */
   transition: background-color 0.3s ease, color 0.3s ease;
   
 }
