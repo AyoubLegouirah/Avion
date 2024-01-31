@@ -44,13 +44,13 @@ const BookNow = () => {
   return (
     <div>
     <div className="video-background3">
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/5 text-center ">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/5 text-center  ">
         <div className="font-eb-garamond">
           <a href="#">
             <img
               src="/image/Logo1er.png"
               alt="Logo Maverick"
-              className="mx-auto mt-1 w-16 md:w-24 lg:w-24 "
+              className="mx-auto mt-1 w-16 md:w-24 lg:w-24  "
             />
           </a>
         </div>
@@ -65,7 +65,7 @@ const BookNow = () => {
       >
         <source src="/video/pilote.mp4" type="video/mp4" />
       </video>
-      <div className="background-image flex items-center justify-center h-screen pt-24 mt-10 ">
+      <div className="background-image flex items-center justify-center h-screen pt-19 mt-16 ">
         <div className="container p-4 rounded-md shadow-md max-w-md text-black blurred-container ">
           <h2 className="text-3xl font-bold mb-4 text-white" style={{ fontFamily: 'Orbitron, sans-serif', color: 'hsl(173, 100%, 51%)' }}>Réservez maintenant</h2>
           <form onSubmit={handleSubmit} className="space-y-4 text-left">
@@ -172,7 +172,7 @@ const BookNow = () => {
         </div>
       </div>
             
-    </div>
+    </div >
     <Footer />
     </div>
   );
