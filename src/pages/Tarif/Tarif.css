@@ -1,0 +1,125 @@
+/* Tarif.css */
+.video-background2 {
+    position: relative;
+    width: 100vw; /* Utilisez la largeur totale de la fenêtre */
+    height: 100vh; /* Utilisez la hauteur totale de la fenêtre */
+    overflow: hidden; /* Assure que rien ne dépasse du cadre de la vidéo */
+}
+
+.video-background2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.tarif-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.74);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 600px) {
+    .tarif-container {
+        width: 90%;
+        margin: 25% auto;
+        position: static;
+        transform: none;
+    }
+}
+
+.tarif-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.tarif-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.74);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.tarif-card:hover {
+    transform: translateY(-5px);
+}
+
+.tarif-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: hsl(173 100% 51%);
+    text-align: center;
+}
+
+.tarif-card-description {
+    color: white;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.tarif-details {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarif-info {
+    color: white;
+    flex: 1;
+    text-align: left;
+}
+
+.tarif-feature {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.tarif-subtext {
+    color: white;
+}
+
+.tarif-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: hsl(173 100% 51%);
+}
+
+.tarif-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tarif-card button:hover {
+    transform: scale(1.05);
+}
