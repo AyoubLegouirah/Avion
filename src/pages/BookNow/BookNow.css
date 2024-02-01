@@ -1,8 +1,8 @@
 .video-background3 {
   position: relative;
-  width: 100vw; /* Utilisez la largeur totale de la fenêtre */
-  height: 110vh; /* Utilisez la hauteur totale de la fenêtre */
-  overflow: hidden; /* Assure que rien ne dépasse du cadre de la vidéo */
+  width: 100vw; 
+  height: 110vh; 
+  overflow: hidden; 
 }
 
 .video-background3 video {
@@ -18,9 +18,9 @@
 /* BookNow.css */
 
 .blurred-container {
-  backdrop-filter: blur(10px); /* Ajustez la valeur du flou selon vos préférences */
-  background-color: rgba(255, 255, 255, 0.1); /* Ajustez la couleur et l'opacité du fond flou */
-  border-radius: 10px; /* Ajustez la valeur de la bordure selon vos préférences */
-  padding: 20px; /* Ajustez l'espacement intérieur selon vos préférences */
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px; 
+  padding: 20px; 
 }
 
