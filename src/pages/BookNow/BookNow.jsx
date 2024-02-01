@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 import 'typeface-anton';
 import 'typeface-orbitron';
 import './BookNow.css';
@@ -6,14 +6,7 @@ import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import Footer from '../../components/Footer/Footer';
 
 const BookNow = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const videoRef = useRef(null);  
   const [formData, setFormData] = useState({
 
   });
@@ -41,16 +34,30 @@ const BookNow = () => {
     // Ferme la modal
     setShowModal(false);
   };
+  const handleVideoEnd = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+    playVideo();
+  }, []);
   return (
     <div className='app relative' >
     <div className="video-background3">
       <HamburgerMenu />
       <video
-        autoPlay
-        muted
-        loop
-        controls={false}
-        className="w-full h-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+      onEnded={handleVideoEnd}
+      className="w-full h-full object-cover"
       >
         <source src="/video/pilote.mp4" type="video/mp4" />
       </video>

@@ -1,16 +1,25 @@
 // Tarif.js
-import React, { useState } from 'react';
+import React, { useRef , useEffect} from 'react';
 import './Tarif.css';
 import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 
 export default function Tarif() {
+  const videoRef = useRef(null); 
   const handleVideoEnd = () => {
     if (videoRef.current) {
       videoRef.current.play();
     }
   };
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+    playVideo();
+  }, []);
   return (
     <div className='app' >
       <div className="video-background2">
@@ -19,9 +28,10 @@ export default function Tarif() {
           autoPlay
           muted
           loop
-          controls={false}
+          playsInline
           onEnded={handleVideoEnd}
           className="w-full h-full object-cover"
+          ref={videoRef}
         >
           <source src="/video/f_22.mp4" type="video/mp4" />
         </video>

@@ -1,48 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import ModalComponent from '../../components/ModalComponent/ModalComponent';
 import Button from '../../components/Button/Button';
+import Footer from '../../components/Footer/Footer';
 import 'typeface-anton';
 import 'typeface-orbitron';
 import { Link } from 'react-router-dom';
-import Footer from '../../components/Footer/Footer';
 import './Home.css';
-
 
 library.add(faCircle, faInfo);
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const videoRef = useRef(null);  
 
   const openModal = () => {
     setIsModalOpen(true);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   const handleHoverEffect = (target) => {
-    console.log(`Hovered over ${target}`);
+    console.log(`Survole de ${target}`);
   };
   const handleVideoEnd = () => {
     if (videoRef.current) {
       videoRef.current.play();
     }
   };
-
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+    playVideo();
+  }, []);
   return (
 
-    <div className="app relative">
+    <div className="app">
       <div className="video-background">
         <video
           autoPlay
           muted
           loop
-          controls={false}
-          onEnded={handleVideoEnd}         
+          playsInline
+          onEnded={handleVideoEnd}
           className="w-full h-full object-cover"
+          ref={videoRef}
         >
           <source src="/video/pilote.mp4" type="video/mp4" />
         </video>

@@ -8,7 +8,6 @@ import 'typeface-orbitron';
 import HamburgerMenu from '../../components/HamburgerMenu/HamburgerMenu';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
-
 import Footer from '../../components/Footer/Footer';
 
 
